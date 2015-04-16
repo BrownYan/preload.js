@@ -35,14 +35,14 @@
 		if(pl_timeout)timeout=Math.floor(pl_timeout);	
     
 		var pl_callback=($('meta[property=pl\\:callback]').attr('content'));
-    callback=pl_callback;
+		callback=pl_callback;
 
 		$('head').append(ss);
 
 	},show=function(){
 		$('body').append(sh);
 		$('body').addClass('__preload');
-    $("body > :not(.__preload_box)").hide();
+		$("body > :not(.__preload_box)").hide();
 		repaint();
 		$(window).on('resize', repaint);
 	},repaint=function(){
@@ -50,7 +50,7 @@
 		$('.__preload_box').css('line-height',vh+'px');
 
 	},hide=function(){
-    $("body > :not(.__preload_box)").fadeIn(500);	
+		$("body > :not(.__preload_box)").fadeIn(500);	
 		$('.__preload_box img').fadeOut(250,function(){
 			$('.__preload_box').fadeOut(250,function(){
 				$('.__preload_box').remove();
